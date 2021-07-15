@@ -9,6 +9,8 @@
 
 <ul th:each="post : ${posts}">
     <li th:text="${post.autor}"></li>
+    <a th:href="@{/posts/{id}(id=${post.id})}"><h4><span th:text="${post.titulo}"></span></h4></a>
+    <p><span th:utext="${#strings.abbreviate(post.texto, 400)} "></span></p>
 </ul>
 
 </body>
